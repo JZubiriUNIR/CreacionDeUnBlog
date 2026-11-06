@@ -1,33 +1,27 @@
 body {
-    background-color: #fff;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
-body.oscuro {
-    background-color: #1a1a2e;
-    color: #eee;
-}
-
-#menu{
-    margin:auto;
+#menu {
+    margin: auto;
     width: 600px;
     list-style: none;
     border-bottom: 1px dotted #999;
-    font-size:2em;
-    color: rgb(1,20,29);
+    font-size: 2em;
+    color: rgb(1, 20, 29);
     display: flex;
 }
 
-.elementoMenu{
+.elementoMenu {
     margin-right: 20px;
 }
 
-a{
+a {
     text-decoration: none;
-    color: rgb(1,20,29)
+    color: rgb(1, 20, 29)
 }
 
-a:visited{
-    color: rgb(1,20,29)
+a:visited {
+    color: rgb(1, 20, 29)
 }
