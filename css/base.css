@@ -57,3 +57,17 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+#menuBlog {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#textoMario {
+    height: 480px;
+    overflow-y: auto;
+    flex: 1;
+}
