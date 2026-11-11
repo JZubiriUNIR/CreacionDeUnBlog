@@ -41,3 +41,10 @@ document.getElementById('formContacto')?.addEventListener('submit', e => {
     alert('¡Mensaje enviado! (simulado)');
     e.target.reset();
 });
+
+document.querySelectorAll("li[data-portada]").forEach(li => {
+    li.addEventListener("click", () => {
+        document.getElementById("portadaJuego").src =
+            "../images/" + li.dataset.portada;
+    });
+});

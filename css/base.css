@@ -66,8 +66,24 @@ footer {
     gap: 20px;
 }
 
-#textoMario {
+#textoMarioWario {
     height: 480px;
     overflow-y: auto;
     flex: 1;
+}
+
+#textoLuigiWaluigi {
+    height: 480px;
+    overflow-y: auto;
+    flex: 2;
+}
+
+li[data-portada] {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+li[data-portada]:hover {
+    color: #e60012;
+    transform: translateX(5px);
 }
