@@ -44,7 +44,7 @@ document.getElementById('formContacto')?.addEventListener('submit', e => {
 
 document.querySelectorAll("li[data-portada]").forEach(li => {
     li.addEventListener("click", () => {
-        document.getElementById("portadaJuego").src =
+        document.getElementById("caratulaJuego").src =
             "../images/" + li.dataset.portada;
     });
 });

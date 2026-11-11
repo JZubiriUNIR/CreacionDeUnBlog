@@ -78,6 +78,17 @@ footer {
     flex: 2;
 }
 
+#divPortada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#caratulaJuego {
+    display: block;
+    margin: 0 auto;
+}
+
 li[data-portada] {
     cursor: pointer;
     transition: all 0.2s;
