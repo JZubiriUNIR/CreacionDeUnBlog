@@ -89,12 +89,12 @@ footer {
     margin: 0 auto;
 }
 
-li[data-portada] {
+li[data-caratulaJuego] {
     cursor: pointer;
     transition: all 0.2s;
 }
 
-li[data-portada]:hover {
+li[data-caratulaJuego]:hover {
     color: #e60012;
     transform: translateX(5px);
 }

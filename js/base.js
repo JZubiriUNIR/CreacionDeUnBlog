@@ -42,9 +42,9 @@ document.getElementById('formContacto')?.addEventListener('submit', e => {
     e.target.reset();
 });
 
-document.querySelectorAll("li[data-portada]").forEach(li => {
+document.querySelectorAll("li[data-caratulaJuego]").forEach(li => {
     li.addEventListener("click", () => {
         document.getElementById("caratulaJuego").src =
-            "../images/" + li.dataset.portada;
+            "../images/" + li.dataset.caratulaJuego;
     });
 });
