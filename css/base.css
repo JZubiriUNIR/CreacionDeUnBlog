@@ -78,23 +78,23 @@ footer {
     flex: 2;
 }
 
-#divPortada {
+#divcaratulajuego {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#caratulaJuego {
+#caratulajuego {
     display: block;
     margin: 0 auto;
 }
 
-li[data-caratulaJuego] {
+li[data-caratulajuego] {
     cursor: pointer;
     transition: all 0.2s;
 }
 
-li[data-caratulaJuego]:hover {
+li[data-caratulajuego]:hover {
     color: #e60012;
     transform: translateX(5px);
 }

@@ -1,32 +1,25 @@
 //Color de fondo según título
-if (document.title === "Mario") {
-    document.body.style.backgroundColor = "red";
-} else if (document.title === "Luigi") {
-    document.body.style.backgroundColor = "green";
-} else if (document.title === "Wario") {
-    document.body.style.backgroundColor = "yellow";
-} else if (document.title === "Waluigi") {
-    document.body.style.backgroundColor = "purple";
-} else {
-    document.body.style.backgroundColor = "white";
-}
+const colores = {
+    "Mario": "red",
+    "Luigi": "green",
+    "Wario": "yellow",
+    "Waluigi": "purple"
+};
+$("body").css("backgroundColor", colores[$("title").text()] || "white");
 
+//Incidir en la página actual
 const paginaActual = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('#menu a').forEach(a => {
-    if (a.getAttribute('href').includes(paginaActual)) {
-        a.style.fontWeight = 'bold';
-        a.style.borderBottom = '2px solid';
-    }
-});
+$('#menu a').filter(function () {
+    return $(this).attr('href').includes(paginaActual);
+}).css({fontWeight: 'bold', borderBottom: '2px solid'});
 
-document.querySelector('footer').insertAdjacentHTML('afterend',
-    `<p>${new Date().toLocaleDateString('es-ES', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    })}</p>`
-);
+//Fecha actual en el footer
+$('footer').after(`<p>${new Date().toLocaleDateString('es-ES', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+})}</p>`);
 
 document.getElementById('formContacto')?.addEventListener('submit', e => {
     e.preventDefault();
@@ -42,9 +35,7 @@ document.getElementById('formContacto')?.addEventListener('submit', e => {
     e.target.reset();
 });
 
-document.querySelectorAll("li[data-caratulaJuego]").forEach(li => {
-    li.addEventListener("click", () => {
-        document.getElementById("caratulaJuego").src =
-            "../images/" + li.dataset.caratulaJuego;
-    });
+//Muestra la caratula del juego seleccionado
+$('li[data-caratulajuego]').on('click', function () {
+    $('#caratulajuego').attr('src', '../images/' + $(this).data('caratulajuego'));
 });
