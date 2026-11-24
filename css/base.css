@@ -12,6 +12,7 @@ body {
     font-size: 2em;
     color: rgb(1, 20, 29);
     display: flex;
+    margin-bottom: 40px;
 }
 
 .elementoMenu {
@@ -72,11 +73,6 @@ footer {
     flex: 1;
 }
 
-#textoLuigiWaluigi {
-    height: 480px;
-    overflow-y: auto;
-    flex: 2;
-}
 
 #divcaratulajuego {
     display: flex;
@@ -97,4 +93,23 @@ li[data-caratulajuego] {
 li[data-caratulajuego]:hover {
     color: red;
     transform: translateX(5px);
+}
+
+#contacto {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    padding: 5px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#contacto input {
+    width: 200px;
+    box-sizing: border-box;
+}
+
+#contacto textarea {
+    width: 300px;
+    height: 100px;
 }

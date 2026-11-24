@@ -21,6 +21,11 @@ $('footer').after(`<p>${new Date().toLocaleDateString('es-ES', {
     day: 'numeric'
 })}</p>`);
 
+//Muestra la caratula del juego seleccionado
+$('li[data-caratulajuego]').on('click', function () {
+    $('#caratulajuego').attr('src', '../images/' + $(this).data('caratulajuego'));
+});
+
 document.getElementById('formContacto')?.addEventListener('submit', e => {
     e.preventDefault();
     const nombre = e.target.nombre.value.trim();
@@ -34,8 +39,4 @@ document.getElementById('formContacto')?.addEventListener('submit', e => {
     alert('¡Mensaje enviado! (simulado)');
     e.target.reset();
 });
-
-//Muestra la caratula del juego seleccionado
-$('li[data-caratulajuego]').on('click', function () {
-    $('#caratulajuego').attr('src', '../images/' + $(this).data('caratulajuego'));
-});
+en
