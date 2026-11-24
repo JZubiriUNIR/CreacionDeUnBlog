@@ -26,17 +26,15 @@ $('li[data-caratulajuego]').on('click', function () {
     $('#caratulajuego').attr('src', '../images/' + $(this).data('caratulajuego'));
 });
 
-document.getElementById('formContacto')?.addEventListener('submit', e => {
+//Validacion de formulario
+$('#formContacto').on('submit', function (e) {
     e.preventDefault();
-    const nombre = e.target.nombre.value.trim();
-    const email = e.target.email.value.trim();
-    const msg = e.target.mensaje.value.trim();
 
-    if (!nombre) return alert('Escribe tu nombre.');
-    if (!/^\S+@\S+\.\S+$/.test(email)) return alert('Email no válido.');
-    if (!msg) return alert('Escribe un mensaje.');
+    if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+    }
 
     alert('¡Mensaje enviado! (simulado)');
-    e.target.reset();
+    this.reset();
 });
-en
