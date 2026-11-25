@@ -1,0 +1,18 @@
+#contacto {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    padding: 5px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#contacto input {
+    width: 200px;
+    box-sizing: border-box;
+}
+
+#contacto textarea {
+    width: 300px;
+    height: 100px;
+}

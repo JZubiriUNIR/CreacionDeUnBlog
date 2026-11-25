@@ -1,0 +1,37 @@
+#menuBlog {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+#texto {
+    min-width: 500px;
+    height: 480px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+
+#divcaratulajuego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#caratulajuego {
+    display: block;
+    margin: 0 auto;
+}
+
+li[data-caratulajuego] {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+li[data-caratulajuego]:hover {
+    color: red;
+    transform: translateX(5px);
+}

@@ -20,21 +20,3 @@ $('footer').after(`<p>${new Date().toLocaleDateString('es-ES', {
     month: 'long',
     day: 'numeric'
 })}</p>`);
-
-//Muestra la caratula del juego seleccionado
-$('li[data-caratulajuego]').on('click', function () {
-    $('#caratulajuego').attr('src', '../images/' + $(this).data('caratulajuego'));
-});
-
-//Validacion de formulario
-$('#formContacto').on('submit', function (e) {
-    e.preventDefault();
-
-    if (!this.checkValidity()) {
-        this.reportValidity();
-        return;
-    }
-
-    alert('¡Mensaje enviado! (simulado)');
-    this.reset();
-});
